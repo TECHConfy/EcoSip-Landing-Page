@@ -1,0 +1,150 @@
+<!-- EcoSip Landing Page - Built with love for hydration enthusiasts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSip - Smart Hydration Bottle</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Typography - Poppins for headings, Inter for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Icons library for social media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-pic">
+                <a href="#">
+                    <img src="ecosip.png" alt="Ecosip Logo" class="logo">
+                </a>
+                <p class="logo-text">Stay Hidrated. Stay Green.</p> <!-- keeping the typo - happens to everyone! -->
+            </div>
+            <!-- Mobile hamburger menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Main navigation -->
+            <ul class="nav-bar" id="navBar">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#">About</a></li> <!-- TODO: add about section later -->
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Cart</a></li> <!-- will connect to cart modal -->
+            </ul>
+            <!-- Dark/light mode toggle -->
+            <div class="mode" id="themeToggle">
+                <img src="sun.png" alt="Toggle Button">
+            </div>
+            <!-- CTA button -->
+            <div class="button">
+                <button type="button" class="button">Buy Now</button> <!-- fixed type attribute -->
+            </div>
+        </header>
+
+        <!-- Main hero section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>"Meet EcoSip - The Smart Bottle That Cares." </h1>
+                <p>Track hydration, save the planet, and sip smarter with EcoSip's intelligent design.</p>
+
+                <div class="hero-buttons">
+                    <button id="addToCartBtn" class="btn primary-btn">Add to Cart</button>
+                    <button class="btn secondary-btn">Watch Demo</button>
+                </div>
+
+                <div class="hero-image">
+                    <img src="hero.jpg" alt="background image" class="product-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features showcase -->
+        <section id="features" class="features-section">
+            <h1>Why Choose EcoSip?</h1>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="icon">💧</span>
+                    <h3>Smart Hydration Tracking</h3>
+                    <p>Monitors your daily intake and reminds you when to drink.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🌡</span>
+                    <h3>Temperature Control</h3>
+                    <p>Keeps your drink hot or cold for hours.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">📱</span>
+                    <h3>App Connectivity</h3>
+                    <p>Syncs to your phone to track hydration goals.</p> <!-- fixed the closing tag -->
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🌐</span>
+                    <h3>Eco-Friendly Design</h3>
+                    <p>Made from 100% recycled stainless steel.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🔋</span>
+                    <h3>Long Battery Life</h3>
+                    <p>Recharge just once a month.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact form section -->
+        <section id="contact" class="contact-section">
+            <h2>Let's Connect</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+            <p id="formMessage" class="success-message"></p>
+        </section>
+
+        <!-- Site footer -->
+        <footer id="footer-section">
+            <p>&copy; 2025 EcoSip Inc. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Follow us on Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Like us on Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Follow us on Twitter" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Shopping cart modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeCart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <button id="checkoutBtn" class="cta-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Order confirmation modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank you for choosing EcoSip!</h2>
+            <p>Your order is on the way. Let's make the planet greener together!</p> <!-- added missing punctuation -->
+            <button id="closeConfirm" class="cta-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
